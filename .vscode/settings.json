@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "markdown",
-        "testing"
+        "testing",
+        "yml"
     ]
 }
