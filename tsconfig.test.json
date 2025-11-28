@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "vitest/globals",
+      "node"
+    ],
+    "verbatimModuleSyntax": true
+  },
+  "files": [
+    "types/sato.d.ts"      // <--- SOLO ESTE ARCHIVO
+  ],
+  "include": [
+    "test/**/*",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts"
+  ]
+}
