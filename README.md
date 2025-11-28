@@ -5,6 +5,7 @@ Sato.js is a small utility library that extends native `String` and `Number` pro
 > ⚠️ Note: This library augments built-in prototypes. While this can make code concise and expressive, it modifies global objects and may conflict with other libraries. Consider this before using it in shared environments.
 
 ---
+[![Run Tests](https://github.com/MiguelFoliaco/sato-js/actions/workflows/test.yml/badge.svg)](https://github.com/MiguelFoliaco/sato-js/actions/workflows/test.yml)
 
 ## Features
 
