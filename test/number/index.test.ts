@@ -1,3 +1,4 @@
+
 import '../../src/number';
 
 describe('Milliseconds conversions', () => {
