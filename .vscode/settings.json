@@ -3,6 +3,7 @@
         "markdown",
         "testing",
         "yml",
-        "npm"
+        "npm",
+        "string"
     ]
 }
