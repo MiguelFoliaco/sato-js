@@ -1,3 +1,5 @@
-const str = "sato";
+import './sato'
+import './string';
+import './number';
 
-console.log(str.isEmail);
+export { }

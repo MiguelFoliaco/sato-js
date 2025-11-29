@@ -1,2 +1,2 @@
-export * from './time';
+import './time';
 //# sourceMappingURL=index.d.ts.map

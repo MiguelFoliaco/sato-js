@@ -1,2 +1,4 @@
-export * from './format'
-export * from './is-type'
+import './format'
+import './is-type'
+
+

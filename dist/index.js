@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const str = "sato";
-console.log(str.isEmail);
+require("./sato");
+require("./string");
+require("./number");
 //# sourceMappingURL=index.js.map

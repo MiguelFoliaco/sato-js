@@ -1,1 +1,1 @@
-import "./types/sato.d.ts";
+import "./src/sato";

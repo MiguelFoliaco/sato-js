@@ -1,1 +1,1 @@
-export * from './time'
+import './time'
