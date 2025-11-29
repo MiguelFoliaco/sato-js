@@ -1,2 +1,2 @@
-export declare const StringProperties: string[];
+export {};
 //# sourceMappingURL=format.d.ts.map

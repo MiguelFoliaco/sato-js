@@ -1,21 +1,27 @@
-import { EMAIL_REGEXP } from "../utils/reg"
+import { EMAIL_REGEXP } from "../utils/reg";
 
-export const StringProperties = ['isEmail', 'isDate']
-const keys = Object.keys(String.prototype)
-const exist = keys.filter(key => StringProperties.includes(key))
+export const StringProperties = ['isEmail', 'isDate'];
 
-if (exist.length == 0) {
-    Object.defineProperties(String.prototype, {
-        'isEmail': {
-            get() {
+const descIsEmail = Object.getOwnPropertyDescriptor(String.prototype, 'isEmail');
 
-                return EMAIL_REGEXP.test(this)
-            }
-        },
-        'isDate': {
-            get() {
-                return !isNaN(Date.parse(this))
-            }
+if (!descIsEmail) {
+    Object.defineProperty(String.prototype, 'isEmail', {
+        configurable: true,
+        enumerable: true,
+        get() {
+            return EMAIL_REGEXP.test(this as string);
         }
-    })
+    });
+}
+
+const descIsDate = Object.getOwnPropertyDescriptor(String.prototype, 'isDate');
+
+if (!descIsDate) {
+    Object.defineProperty(String.prototype, 'isDate', {
+        configurable: true,
+        enumerable: true,
+        get() {
+            return !isNaN(Date.parse(this as string));
+        }
+    });
 }

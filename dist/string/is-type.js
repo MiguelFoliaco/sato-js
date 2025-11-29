@@ -3,19 +3,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StringProperties = void 0;
 const reg_1 = require("../utils/reg");
 exports.StringProperties = ['isEmail', 'isDate'];
-const keys = Object.keys(String.prototype);
-const exist = keys.filter(key => exports.StringProperties.includes(key));
-if (exist.length == 0) {
-    Object.defineProperties(String.prototype, {
-        'isEmail': {
-            get() {
-                return reg_1.EMAIL_REGEXP.test(this);
-            }
-        },
-        'isDate': {
-            get() {
-                return !isNaN(Date.parse(this));
-            }
+const descIsEmail = Object.getOwnPropertyDescriptor(String.prototype, 'isEmail');
+if (!descIsEmail) {
+    Object.defineProperty(String.prototype, 'isEmail', {
+        configurable: true,
+        enumerable: true,
+        get() {
+            return reg_1.EMAIL_REGEXP.test(this);
+        }
+    });
+}
+const descIsDate = Object.getOwnPropertyDescriptor(String.prototype, 'isDate');
+if (!descIsDate) {
+    Object.defineProperty(String.prototype, 'isDate', {
+        configurable: true,
+        enumerable: true,
+        get() {
+            return !isNaN(Date.parse(this));
         }
     });
 }

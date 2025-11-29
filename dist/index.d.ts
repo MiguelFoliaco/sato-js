@@ -1,6 +1,5 @@
 import './string';
 import './number';
-declare const version = "1.0.4";
+declare const version = "1.0.12";
 export { version };
-export {};
 //# sourceMappingURL=index.d.ts.map
