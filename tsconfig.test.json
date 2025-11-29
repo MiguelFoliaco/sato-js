@@ -8,7 +8,7 @@
     "verbatimModuleSyntax": true
   },
   "files": [
-    "types/sato.d.ts"      // <--- SOLO ESTE ARCHIVO
+    "src/**/type.ts"
   ],
   "include": [
     "test/**/*",

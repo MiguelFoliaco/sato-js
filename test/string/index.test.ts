@@ -54,4 +54,15 @@ describe('String Prototype Extensions', () => {
             expect(phoneWithoutFormat.format('###-###-####', '-')).toBe('311-111-1111');
         })
     })
+
+
+    describe('truncate', () => {
+        const text = '123456789'
+        it('should return string truncated', () => {
+            expect(text.truncate(5)).toBe('12345...');
+            expect(text.truncate(5, '...')).toBe('12345...');
+            expect(text.truncate(5, '')).toBe('12345');
+            expect(text.truncate(20, '..')).toBe('123456789');
+        })
+    })
 });

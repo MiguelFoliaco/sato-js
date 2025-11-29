@@ -1,71 +1,78 @@
-Object.defineProperties(Number.prototype, {
-    // Milliseconds
-    'msToS': { get() { return this / 1000 } },
-    'sToMs': { get() { return this * 1000 } },
+export const StringProperties = ['msToS', 'sToMs', 'msToMin', 'minToMs', 'msToH', 'hToMs', 'msToD', 'dToMs', 'msToM', 'mToMs', 'msToY', 'yToMs', 'sToMin', 'minToS', 'sToH', 'hToS', 'sToD', 'dToS', 'sToM', 'mToS', 'sToY', 'yToS', 'minToH', 'hToMin', 'minToD', 'dToMin', 'minToM', 'mToMin']
+const keys = Object.keys(String.prototype)
+const exist = keys.filter(key => StringProperties.includes(key))
 
-    'msToMin': { get() { return this / 60000 } },
-    'minToMs': { get() { return this * 60000 } },
+if (exist.length == 0) {
+    Object.defineProperties(Number.prototype, {
+        // Milliseconds
+        'msToS': { get() { return this / 1000 } },
+        'sToMs': { get() { return this * 1000 } },
 
-    'msToH': { get() { return this / 3600000 } },
-    'hToMs': { get() { return this * 3600000 } },
+        'msToMin': { get() { return this / 60000 } },
+        'minToMs': { get() { return this * 60000 } },
 
-    'msToD': { get() { return this / 86400000 } },
-    'dToMs': { get() { return this * 86400000 } },
+        'msToH': { get() { return this / 3600000 } },
+        'hToMs': { get() { return this * 3600000 } },
 
-    'msToM': { get() { return this / 2592000000 } },
-    'mToMs': { get() { return this * 2592000000 } },
+        'msToD': { get() { return this / 86400000 } },
+        'dToMs': { get() { return this * 86400000 } },
 
-    'msToY': { get() { return this / 31536000000 } },
-    'yToMs': { get() { return this * 31536000000 } },
+        'msToM': { get() { return this / 2592000000 } },
+        'mToMs': { get() { return this * 2592000000 } },
 
-    // Seconds
-    'sToMin': { get() { return this / 60 } },
-    'minToS': { get() { return this * 60 } },
+        'msToY': { get() { return this / 31536000000 } },
+        'yToMs': { get() { return this * 31536000000 } },
 
-    'sToH': { get() { return this / 3600 } },
-    'hToS': { get() { return this * 3600 } },
+        // Seconds
+        'sToMin': { get() { return this / 60 } },
+        'minToS': { get() { return this * 60 } },
 
-    'sToD': { get() { return this / 86400 } },
-    'dToS': { get() { return this * 86400 } },
+        'sToH': { get() { return this / 3600 } },
+        'hToS': { get() { return this * 3600 } },
 
-    'sToM': { get() { return this / 2592000 } }, // 30 días
-    'mToS': { get() { return this * 2592000 } },
+        'sToD': { get() { return this / 86400 } },
+        'dToS': { get() { return this * 86400 } },
 
-    'sToY': { get() { return this / 31536000 } }, // 365 días
-    'yToS': { get() { return this * 31536000 } },
+        'sToM': { get() { return this / 2592000 } }, // 30 días
+        'mToS': { get() { return this * 2592000 } },
 
-    // Minutes
-    'minToH': { get() { return this / 60 } },
-    'hToMin': { get() { return this * 60 } },
+        'sToY': { get() { return this / 31536000 } }, // 365 días
+        'yToS': { get() { return this * 31536000 } },
 
-    'minToD': { get() { return this / 1440 } }, // 24*60
-    'dToMin': { get() { return this * 1440 } },
+        // Minutes
+        'minToH': { get() { return this / 60 } },
+        'hToMin': { get() { return this * 60 } },
 
-    'minToM': { get() { return this / 43200 } }, // 30*24*60
-    'mToMin': { get() { return this * 43200 } },
+        'minToD': { get() { return this / 1440 } }, // 24*60
+        'dToMin': { get() { return this * 1440 } },
 
-    'minToY': { get() { return this / 525600 } }, // 365*24*60
-    'yToMin': { get() { return this * 525600 } },
+        'minToM': { get() { return this / 43200 } }, // 30*24*60
+        'mToMin': { get() { return this * 43200 } },
 
-    // Hours
-    'hToD': { get() { return this / 24 } },
-    'dToH': { get() { return this * 24 } },
+        'minToY': { get() { return this / 525600 } }, // 365*24*60
+        'yToMin': { get() { return this * 525600 } },
 
-    'hToM': { get() { return this / 720 } }, // 30*24
-    'mToH': { get() { return this * 720 } },
+        // Hours
+        'hToD': { get() { return this / 24 } },
+        'dToH': { get() { return this * 24 } },
 
-    'hToY': { get() { return this / 8760 } }, // 365*24
-    'yToH': { get() { return this * 8760 } },
+        'hToM': { get() { return this / 720 } }, // 30*24
+        'mToH': { get() { return this * 720 } },
 
-    // Days
-    'dToM': { get() { return this / 30 } },
-    'mToD': { get() { return this * 30 } },
+        'hToY': { get() { return this / 8760 } }, // 365*24
+        'yToH': { get() { return this * 8760 } },
 
-    'dToY': { get() { return this / 365 } },
-    'yToD': { get() { return this * 365 } },
+        // Days
+        'dToM': { get() { return this / 30 } },
+        'mToD': { get() { return this * 30 } },
 
-    // Months
-    'mToY': { get() { return this / 12 } },
-    'yToM': { get() { return this * 12 } },
+        'dToY': { get() { return this / 365 } },
+        'yToD': { get() { return this * 365 } },
 
-})
+        // Months
+        'mToY': { get() { return this / 12 } },
+        'yToM': { get() { return this * 12 } },
+
+    })
+}
+

@@ -1,1 +1,3 @@
-import "./src/sato";
+import "./src/string/type";
+import "./src/number/type";
+
