@@ -1,4 +1,8 @@
 import './string';
 import './number';
 
+const version = '1.0.4';
+
+export { version }
+
 export { }

@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/sato.ts","./src/number/index.ts","./src/number/time.ts","./src/string/format.ts","./src/string/index.ts","./src/string/is-type.ts","./src/utils/reg.ts"],"version":"5.9.3"}
+{"root":["./src/index.ts","./src/number/index.ts","./src/number/time.ts","./src/number/type.ts","./src/string/format.ts","./src/string/index.ts","./src/string/is-type.ts","./src/string/truncate.ts","./src/string/type.ts","./src/utils/reg.ts"],"version":"5.9.3"}

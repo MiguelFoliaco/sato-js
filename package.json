@@ -1,9 +1,9 @@
 {
   "name": "sato.js",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Sato.js is a small utility library that extends native `String` and `Number` prototypes with convenient, expressive properties and methods. It's designed as a tiny syntactic sugar layer for working with strings and time-related number conversions.",
   "main": "index.js",
-  "types": "./src/sato.ts",
+  "types": "./src/index.ts",
   "exports": {
     ".": "./dist/index.js",
     "./number": "./dist/number/index.js",
