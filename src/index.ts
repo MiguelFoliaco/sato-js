@@ -1,6 +1,8 @@
 import './string';
 import './number';
 
-const version = '1.0.12';
+export { defineNumberGetter, defineStringGetter } from './utils/defineGetter'
+
+const version = '1.0.14';
 
 export { version }
