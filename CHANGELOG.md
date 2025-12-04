@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/MiguelFoliaco/sato-js/compare/v1.1.0...v1.2.0) (2025-12-04)
+
+
+### Features
+
+* **string:** :sparkles: Add new method toSlug and lengthWithoutSpaces ([a4c406c](https://github.com/MiguelFoliaco/sato-js/commit/a4c406cb3ceff1c96521e3473db74673b96f6b8d))
+
+
+### Bug Fixes
+
+* **npm:** :bug: remove src of npmignore ([3cea984](https://github.com/MiguelFoliaco/sato-js/commit/3cea984f3174acf4e8c4c38ada9f78b90861ee31))
+
 ## 1.1.0 (2025-12-04)
 
 
