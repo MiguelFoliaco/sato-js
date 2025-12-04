@@ -51,6 +51,20 @@ declare global {
          * @returns string
          */
         truncate(length: number, end?: string): string
+        /**
+         * @description Converts the string to lowercase and replaces all spaces with hyphens
+         * @author SatoJS
+         * @example
+         * 'test@example'.toSlug() // 'test-example'
+         * @returns string
+         */
+        toSlug(): string
+
+        /**
+         * @description Returns the length of the string without spaces
+         * @returns number
+         */
+        lengthWithoutSpaces(): number
     }
 
 }

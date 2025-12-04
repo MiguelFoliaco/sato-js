@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.version = void 0;
+exports.version = exports.defineStringGetter = exports.defineNumberGetter = void 0;
 require("./string");
 require("./number");
-const version = '1.0.12';
+var defineGetter_1 = require("./utils/defineGetter");
+Object.defineProperty(exports, "defineNumberGetter", { enumerable: true, get: function () { return defineGetter_1.defineNumberGetter; } });
+Object.defineProperty(exports, "defineStringGetter", { enumerable: true, get: function () { return defineGetter_1.defineStringGetter; } });
+const version = '1.0.15';
 exports.version = version;
 //# sourceMappingURL=index.js.map

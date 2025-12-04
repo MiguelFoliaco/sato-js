@@ -30,3 +30,23 @@ if (!Object.getOwnPropertyDescriptor(String.prototype, "format")) {
         }
     });
 }
+
+if (!Object.getOwnPropertyDescriptor(String.prototype, "toSlug")) {
+    Object.defineProperty(String.prototype, "toSlug", {
+        configurable: true,
+        writable: true,
+        value: function (): string {
+            return (this as string).replaceAll(' ', '-').toLowerCase();
+        }
+    })
+}
+
+if (!Object.getOwnPropertyDescriptor(String.prototype, "lengthWithoutSpaces")) {
+    Object.defineProperty(String.prototype, "lengthWithoutSpaces", {
+        configurable: true,
+        writable: true,
+        value: function (): number {
+            return (this as string).replaceAll(' ', '').length;
+        }
+    })
+}

@@ -1,58 +1,52 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StringProperties = void 0;
-exports.StringProperties = ['msToS', 'sToMs', 'msToMin', 'minToMs', 'msToH', 'hToMs', 'msToD', 'dToMs', 'msToM', 'mToMs', 'msToY', 'yToMs', 'sToMin', 'minToS', 'sToH', 'hToS', 'sToD', 'dToS', 'sToM', 'mToS', 'sToY', 'yToS', 'minToH', 'hToMin', 'minToD', 'dToMin', 'minToM', 'mToMin'];
-const exist = exports.StringProperties.some(p => Object.getOwnPropertyDescriptor(String.prototype, p));
-if (!exist) {
-    Object.defineProperties(Number.prototype, {
-        // Milliseconds
-        'msToS': { enumerable: true, get() { return this / 1000; } },
-        'sToMs': { enumerable: true, get() { return this * 1000; } },
-        'msToMin': { enumerable: true, get() { return this / 60000; } },
-        'minToMs': { enumerable: true, get() { return this * 60000; } },
-        'msToH': { enumerable: true, get() { return this / 3600000; } },
-        'hToMs': { enumerable: true, get() { return this * 3600000; } },
-        'msToD': { enumerable: true, get() { return this / 86400000; } },
-        'dToMs': { enumerable: true, get() { return this * 86400000; } },
-        'msToM': { enumerable: true, get() { return this / 2592000000; } },
-        'mToMs': { enumerable: true, get() { return this * 2592000000; } },
-        'msToY': { enumerable: true, get() { return this / 31536000000; } },
-        'yToMs': { enumerable: true, get() { return this * 31536000000; } },
-        // Seconds
-        'sToMin': { enumerable: true, get() { return this / 60; } },
-        'minToS': { enumerable: true, get() { return this * 60; } },
-        'sToH': { enumerable: true, get() { return this / 3600; } },
-        'hToS': { enumerable: true, get() { return this * 3600; } },
-        'sToD': { enumerable: true, get() { return this / 86400; } },
-        'dToS': { enumerable: true, get() { return this * 86400; } },
-        'sToM': { enumerable: true, get() { return this / 2592000; } }, // 30 días
-        'mToS': { enumerable: true, get() { return this * 2592000; } },
-        'sToY': { enumerable: true, get() { return this / 31536000; } }, // 365 días
-        'yToS': { enumerable: true, get() { return this * 31536000; } },
-        // Minutes
-        'minToH': { enumerable: true, get() { return this / 60; } },
-        'hToMin': { enumerable: true, get() { return this * 60; } },
-        'minToD': { enumerable: true, get() { return this / 1440; } }, // 24*60
-        'dToMin': { enumerable: true, get() { return this * 1440; } },
-        'minToM': { enumerable: true, get() { return this / 43200; } }, // 30*24*60
-        'mToMin': { enumerable: true, get() { return this * 43200; } },
-        'minToY': { enumerable: true, get() { return this / 525600; } }, // 365*24*60
-        'yToMin': { enumerable: true, get() { return this * 525600; } },
-        // Hours
-        'hToD': { enumerable: true, get() { return this / 24; } },
-        'dToH': { enumerable: true, get() { return this * 24; } },
-        'hToM': { enumerable: true, get() { return this / 720; } }, // 30*24
-        'mToH': { enumerable: true, get() { return this * 720; } },
-        'hToY': { enumerable: true, get() { return this / 8760; } }, // 365*24
-        'yToH': { enumerable: true, get() { return this * 8760; } },
-        // Days
-        'dToM': { enumerable: true, get() { return this / 30; } },
-        'mToD': { enumerable: true, get() { return this * 30; } },
-        'dToY': { enumerable: true, get() { return this / 365; } },
-        'yToD': { enumerable: true, get() { return this * 365; } },
-        // Months
-        'mToY': { enumerable: true, get() { return this / 12; } },
-        'yToM': { enumerable: true, get() { return this * 12; } },
-    });
-}
+const defineGetter_1 = require("../utils/defineGetter");
+// Milliseconds
+(0, defineGetter_1.defineNumberGetter)("msToS", function () { return this / 1000; });
+(0, defineGetter_1.defineNumberGetter)("sToMs", function () { return this * 1000; });
+(0, defineGetter_1.defineNumberGetter)("msToMin", function () { return this / 60000; });
+(0, defineGetter_1.defineNumberGetter)("minToMs", function () { return this * 60000; });
+(0, defineGetter_1.defineNumberGetter)("msToH", function () { return this / 3600000; });
+(0, defineGetter_1.defineNumberGetter)("hToMs", function () { return this * 3600000; });
+(0, defineGetter_1.defineNumberGetter)("msToD", function () { return this / 86400000; });
+(0, defineGetter_1.defineNumberGetter)("dToMs", function () { return this * 86400000; });
+(0, defineGetter_1.defineNumberGetter)("msToM", function () { return this / 2592000000; });
+(0, defineGetter_1.defineNumberGetter)("mToMs", function () { return this * 2592000000; });
+(0, defineGetter_1.defineNumberGetter)("msToY", function () { return this / 31536000000; });
+(0, defineGetter_1.defineNumberGetter)("yToMs", function () { return this * 31536000000; });
+// Seconds
+(0, defineGetter_1.defineNumberGetter)("sToMin", function () { return this / 60; });
+(0, defineGetter_1.defineNumberGetter)("minToS", function () { return this * 60; });
+(0, defineGetter_1.defineNumberGetter)("sToH", function () { return this / 3600; });
+(0, defineGetter_1.defineNumberGetter)("hToS", function () { return this * 3600; });
+(0, defineGetter_1.defineNumberGetter)("sToD", function () { return this / 86400; });
+(0, defineGetter_1.defineNumberGetter)("dToS", function () { return this * 86400; });
+(0, defineGetter_1.defineNumberGetter)("sToM", function () { return this / 2592000; });
+(0, defineGetter_1.defineNumberGetter)("mToS", function () { return this * 2592000; });
+(0, defineGetter_1.defineNumberGetter)("sToY", function () { return this / 31536000; });
+(0, defineGetter_1.defineNumberGetter)("yToS", function () { return this * 31536000; });
+// Minutes
+(0, defineGetter_1.defineNumberGetter)("minToH", function () { return this / 60; });
+(0, defineGetter_1.defineNumberGetter)("hToMin", function () { return this * 60; });
+(0, defineGetter_1.defineNumberGetter)("minToD", function () { return this / 1440; });
+(0, defineGetter_1.defineNumberGetter)("dToMin", function () { return this * 1440; });
+(0, defineGetter_1.defineNumberGetter)("minToM", function () { return this / 43200; });
+(0, defineGetter_1.defineNumberGetter)("mToMin", function () { return this * 43200; });
+(0, defineGetter_1.defineNumberGetter)("minToY", function () { return this / 525600; });
+(0, defineGetter_1.defineNumberGetter)("yToMin", function () { return this * 525600; });
+// Hours
+(0, defineGetter_1.defineNumberGetter)("hToD", function () { return this / 24; });
+(0, defineGetter_1.defineNumberGetter)("dToH", function () { return this * 24; });
+(0, defineGetter_1.defineNumberGetter)("hToM", function () { return this / 720; });
+(0, defineGetter_1.defineNumberGetter)("mToH", function () { return this * 720; });
+(0, defineGetter_1.defineNumberGetter)("hToY", function () { return this / 8760; });
+(0, defineGetter_1.defineNumberGetter)("yToH", function () { return this * 8760; });
+// Days
+(0, defineGetter_1.defineNumberGetter)("dToM", function () { return this / 30; });
+(0, defineGetter_1.defineNumberGetter)("mToD", function () { return this * 30; });
+(0, defineGetter_1.defineNumberGetter)("dToY", function () { return this / 365; });
+(0, defineGetter_1.defineNumberGetter)("yToD", function () { return this * 365; });
+// Months
+(0, defineGetter_1.defineNumberGetter)("mToY", function () { return this / 12; });
+(0, defineGetter_1.defineNumberGetter)("yToM", function () { return this * 12; });
 //# sourceMappingURL=time.js.map

@@ -65,4 +65,31 @@ describe('String Prototype Extensions', () => {
             expect(text.truncate(20, '..')).toBe('123456789');
         })
     })
+
+    describe('slug', () => {
+
+        const text = 'sato js is cool'
+        const text2 = 'sato js is    cool'
+
+        it('should return slug', () => {
+            expect(text.toSlug()).toBe('sato-js-is-cool');
+        })
+
+        it('should return slug 2', () => {
+            expect(text2.toSlug()).toBe('sato-js-is----cool');
+        })
+    })
+    describe('lengthWithoutSpaces', () => {
+
+        const text = 'sato js is cool'
+        const text2 = 'sato js is    cool'
+
+        it('should return slug', () => {
+            expect(text.lengthWithoutSpaces()).toBe(12);
+        })
+
+        it('should return slug 2', () => {
+            expect(text2.lengthWithoutSpaces()).toBe(12);
+        })
+    })
 });
